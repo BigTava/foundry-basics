@@ -59,6 +59,18 @@ $ cast <subcommand>
 
 ### Common Commands
 
+#### Use a non-IDE Terminal to store the Private Key (Never use .env)
+
+```shell
+$ cast wallet import defaultKey --interactive
+```
+
+#### Use script with stored private key on keystore
+
+```shell
+$ forge script script/DeployCounter.sol --rpc-url http://127.0.0.1:8545 --broadcast --account defaultKey --sender 0xf39fd6e51aad88f6f4ce6ab8827279cfffb92266 -vvvv
+```
+
 #### Use script with Anvil
 
 ```shell
@@ -69,6 +81,12 @@ $ forge script script/DeployCounter.sol --rpc-url http://127.0.0.1:8545 --broadc
 
 ```shell
 $ cast --to-base 0x714c2 dec
+```
+
+#### Remove bash history
+
+```shell
+$ rm bash_history
 ```
 
 ### Help
