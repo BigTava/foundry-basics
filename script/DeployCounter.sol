@@ -9,7 +9,7 @@ import {Counter} from "../src/Counter.sol";
 contract DeployCounter is Script {
     function run() external returns (Counter counter) {
         vm.startBroadcast();
-        counter = new Counter();
+        counter = new Counter /*{ value: 1 ether }*/();
         vm.stopBroadcast();
         return counter;
     }
