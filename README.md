@@ -77,6 +77,18 @@ $ forge script script/DeployCounter.sol --rpc-url http://127.0.0.1:8545 --broadc
 $ forge script script/DeployCounter.sol --rpc-url http://127.0.0.1:8545 --broadcast --private-key 0xac0974bec39a17e36ba4a6b4d238ff944bacb478cbed5efcae784d7bf4f2ff80
 ```
 
+#### Send transaction from cli
+
+```shell
+$ cast send 0x5FbDB2315678afecb367f032d93F642f64180aa3 "setNumber(uint256)" 10 --rpc-url http://127.0.0.1:8545 --account defaultKey
+```
+
+#### Call contract from cli
+
+```shell
+$ cast call 0x5FbDB2315678afecb367f032d93F642f64180aa3 "number()"
+```
+
 #### Hex to decimal
 
 ```shell
@@ -85,9 +97,9 @@ $ cast --to-base 0x714c2 dec
 
 #### Remove bash history
 
-```shell
+````shell
 $ rm bash_history
-```
+```dd
 
 ### Help
 
@@ -95,4 +107,4 @@ $ rm bash_history
 $ forge --help
 $ anvil --help
 $ cast --help
-```
+````
